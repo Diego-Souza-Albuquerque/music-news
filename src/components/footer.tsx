@@ -52,7 +52,7 @@ export default function Footer() {
   return (
     <footer
       aria-labelledby="footer-heading"
-      className="relative w-full bottom-0 dark:bg-gray-900 bg-white  border-t border-gray-500 mt-32"
+      className="relative w-full bottom-0 dark:bg-gray-900 bg-white  border-t border-gray-500 "
     >
       <h2 id="footer-heading" className="sr-only">
         Footer
@@ -73,7 +73,7 @@ export default function Footer() {
             ))}
           </div>
           <p className="text-xs leading-5 text-gray-400">
-            &copy; 2023 Diego Albuquerque, Inc. All rights reserved.
+            &copy; 2024 Diego Albuquerque, Inc. All rights reserved.
           </p>
         </div>
       </div>

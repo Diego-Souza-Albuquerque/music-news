@@ -42,7 +42,8 @@ export default function Header() {
           </Link>
           <Link
             className="hover:border-b hover:border-black dark:hover:border-white"
-            href="/"
+            href="http://localhost:1337/admin/"
+            target="_blank"
           >
             Publicar
           </Link>
