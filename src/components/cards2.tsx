@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { useData } from "@/contexts/dataContext";
 
 type NewsType = {
   id: number;
@@ -18,13 +17,30 @@ type NewsType = {
   };
 };
 
-export default function Card() {
-  const { handleFetchNews, handleSelectPage, news } = useData();
+export default function CardTwo() {
   const router = useRouter();
 
-  const handleOpenNews = (tittle: string) => {
-    router.push(`/${tittle}`);
+  const [news, setNews] = useState([]);
+
+  const handleOpenNews = (id: number) => {
+    router.push(`/${id}`);
   };
+
+  async function handleFetchNews() {
+    try {
+      const response = await fetch(
+        `${process.env.STRAPI_URL}/api/news?populate=*`,
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${process.env.STRAPI_TOKEN}`,
+          },
+        }
+      );
+      const data = await response.json();
+      setNews(data?.data);
+    } catch (error) {}
+  }
 
   console.log(news);
 
@@ -39,8 +55,7 @@ export default function Card() {
           <div
             key={index}
             onClick={() => {
-              handleSelectPage(index);
-              handleOpenNews(item.attributes.titulo);
+              handleOpenNews(item.id);
             }}
             className="h-[350px] w-[380px] rounded-lg flex flex-col gap-2 border-[1px] border-gray-300 hover:shadow-lg"
           >

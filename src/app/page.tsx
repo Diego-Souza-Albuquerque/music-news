@@ -1,4 +1,5 @@
 import Card from "@/components/cards";
+import CardTwo from "@/components/cards2";
 import FirstCard from "@/components/firstCard";
 
 export default function Home() {
@@ -8,7 +9,7 @@ export default function Home() {
         <FirstCard />
       </div>
       <div>
-        <Card />
+        <CardTwo />
       </div>
     </main>
   );

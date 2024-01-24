@@ -52,13 +52,13 @@ export default function Footer() {
   return (
     <footer
       aria-labelledby="footer-heading"
-      className="relative w-full bottom-0 dark:bg-gray-900 bg-white  border-t border-gray-500 "
+      className="relative w-full bottom-0 dark:bg-gray-900 bg-white border-t border-gray-500 -mt-[60px]"
     >
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
       <div className="mx-auto w-full xl:px-12 lg:px-12 md:px-12 sm:px-6 px-6">
-        <div className="flex py-5 xl:flex-row lg:flex-row md:flex-row flex-col items-center xl:justify-between lg:justify-between md:justify-between  justify-center gap-2 w-full">
+        <div className="flex py-4 xl:flex-row lg:flex-row md:flex-row flex-col items-center xl:justify-between lg:justify-between md:justify-between  justify-center gap-2 w-full">
           <div className="flex space-x-6 md:order-2">
             {footerNavigation.social.map((item) => (
               <a
