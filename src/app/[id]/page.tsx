@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import Paragrafo from "@/components/paragrafo";
 
 export default async function NewsPageTwo({
   params,
@@ -41,14 +41,8 @@ export default async function NewsPageTwo({
           <div className="mt-10 max-w-3xl">
             {/* Paragrafo1 */}
             <div>
-              {dataNew?.titleP1 ? (
-                <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">
-                  {dataNew?.titleP1}
-                </h2>
-              ) : (
-                ""
-              )}
-              <p className="mt-6 text-xl leading-8">{`${dataNew?.p1}`}</p>
+              {dataNew?.p1 ? <Paragrafo p={dataNew?.p1} /> : ""}
+
               {dataNew?.citacao1 ? (
                 <figure className="mt-10 border-l border-indigo-600 pl-9">
                   <blockquote className="font-semibold text-gray-900">
@@ -76,20 +70,9 @@ export default async function NewsPageTwo({
               ) : (
                 ""
               )}
-              {dataNew?.p2 ? (
-                <p className="mt-6 text-xl leading-8">
-                  {dataNew?.p2
-                    .split("\n")
-                    .map((paragraph: string, index: number) => (
-                      <Fragment key={index}>
-                        {paragraph}
-                        <br />
-                      </Fragment>
-                    ))}
-                </p>
-              ) : (
-                ""
-              )}
+
+              {dataNew?.p2 ? <Paragrafo p={dataNew?.p2} /> : ""}
+
               {dataNew?.citacao2 ? (
                 <figure className="mt-10 border-l border-indigo-600 pl-9">
                   <blockquote className="font-semibold text-gray-900">
@@ -117,11 +100,9 @@ export default async function NewsPageTwo({
               ) : (
                 ""
               )}
-              {dataNew?.p3 ? (
-                <p className="mt-6 text-xl leading-8">{`${dataNew?.p3}`}</p>
-              ) : (
-                ""
-              )}
+
+              {dataNew?.p3 ? <Paragrafo p={dataNew?.p3} /> : ""}
+
               {dataNew?.citacao3 ? (
                 <figure className="mt-10 border-l border-indigo-600 pl-9">
                   <blockquote className="font-semibold text-gray-900">

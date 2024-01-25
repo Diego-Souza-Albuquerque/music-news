@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function FirstCard() {
   return (
-    <div className="relative h-full w-full rounded flex flex-col justify-center">
+    <div className="relative h-full w-full rounded flex flex-col justify-center items-center">
       <motion.div
         initial={{ scale: 1 }}
         animate={{ scale: 1.3 }}
@@ -12,22 +12,18 @@ export default function FirstCard() {
         className="relative w-full h-full rounded"
       >
         <Image
-          src="/imageBG5.jpg"
+          src="/image1.jpg"
           alt=""
           width={1200}
           height={1200}
-          className="aspect-[5/1] w-full object-cover rounded"
+          className="aspect-[5/2] w-full object-cover rounded brightness-50"
         />
       </motion.div>
-      {/* <span className="absolute flex flex-col gap-2 items-start px-4 text-white ">
-        <h1 className="text-3xl font-[600]">
-          Tarraxas alteram som da guitarra?
+      <span className="absolute top-36 flex flex-col gap-2 items-start px-4 text-white ">
+        <h1 className="text-3xl font-[700] tracking-wide">
+          As melhores notícias no mundo da música, você encontra aqui
         </h1>
-        <h2 className="text-lg font-[500]">
-          Segundo Paul Reed Smith, tarraxas Wing Button geram menos
-          interferência no comportamento das cordas
-        </h2>
-      </span> */}
+      </span>
     </div>
   );
 }

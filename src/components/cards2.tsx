@@ -50,7 +50,7 @@ export default function CardTwo() {
 
   return (
     <>
-      <div className="flex flex-wrap gap-x-8 gap-y-14 justify-center">
+      <div className="flex flex-wrap gap-x-8 gap-y-14 justify-center my-10">
         {news?.map((item: NewsType, index: number) => (
           <div
             key={index}
